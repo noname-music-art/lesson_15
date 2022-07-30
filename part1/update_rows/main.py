@@ -15,9 +15,9 @@ from tools import create_table
 con = sqlite3.connect(":memory:")
 con = create_table(con)  # сформируем таблицу из предыдущих уроков
 cur = con.cursor()
-sqlite_query_first = ("")  # TODO напишите здесь запрос на изменение строки
+sqlite_query_first = ("UPDATE animals SET `AnimalType`='Кошка' WHERE `Name`='Семен'")
 cur.execute(sqlite_query_first)
-sqlite_query_second = ("")  # TODO напишите здесь запрос на изменение строки
+sqlite_query_second = ("UPDATE animals SET `AnimalType`='Собака' WHERE `Name`='Бобик'")
 cur.execute(sqlite_query_second)
 
 # Не удаляйте этот код, он используется
